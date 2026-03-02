@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="aniket762.nyayAssist.AssistLawApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-03-02T05:40:06.028Z" hostname="Anikets-MacBook-Air.local" time="1.616">
+  <properties/>
+  <testcase name="contextLoads()" classname="aniket762.nyayAssist.AssistLawApplicationTests" time="0.456"/>
+  <system-out><![CDATA[11:10:06.128 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [aniket762.nyayAssist.AssistLawApplicationTests]: AssistLawApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:10:06.198 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration aniket762.nyayAssist.AssistLawApplication for test class aniket762.nyayAssist.AssistLawApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.3)
+
+2026-03-02T11:10:06.423+05:30  INFO 41094 --- [assistLaw] [    Test worker] a.nyayAssist.AssistLawApplicationTests   : Starting AssistLawApplicationTests using Java 17.0.2 with PID 41094 (started by aniket in /Users/aniket/Desktop/workspace/na-backend-ms)
+2026-03-02T11:10:06.424+05:30  INFO 41094 --- [assistLaw] [    Test worker] a.nyayAssist.AssistLawApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2026-03-02T11:10:06.972+05:30  INFO 41094 --- [assistLaw] [    Test worker] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-03-02T11:10:07.180+05:30  INFO 41094 --- [assistLaw] [    Test worker] a.nyayAssist.AssistLawApplicationTests   : Started AssistLawApplicationTests in 0.894 seconds (process running for 1.716)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
