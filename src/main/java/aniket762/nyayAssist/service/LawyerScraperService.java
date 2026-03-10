@@ -7,10 +7,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class LawyerScraperService {
 
-    @Tool(description = "Scrapes the internet to find top-rated lawyers based on a specific location and specialty.")
+    @Tool(description = "Search lawyers by city and specialty")
     public String searchLawyers(
-            @ToolParam(description = "The city or region to search in") String location,
-            @ToolParam(description = "The legal specialty, e.g., 'Criminal', 'Corporate'") String specialty) {
-        return "Searching for " + specialty + " lawyers in " + location + "...";
+            @ToolParam(description = "City to search") String location,
+            @ToolParam(description = "Law specialization") String specialty
+    ) {
+        return "Searching for " + specialty + " lawyers in " + location;
     }
 }

@@ -1,20 +1,21 @@
 spring:
   application:
-    name: "nyayassist"
+    name: nyayassist
+
   main:
-    banner-mode: "off"
+    web-application-type: none
+    banner-mode: off
+
   ai:
     mcp:
       server:
+        name: lawyer-assistant
+        version: 1.0.0
+        transport: STDIO
         type: SYNC
-        name: "LawyerScraperServer"
-        version: "1.0.0"
-
-server:
-  port: 8080
 
 logging:
-  pattern:
-    console: ""
+  level:
+    root: OFF
   file:
-    name: "mcp-server.log"
+    name: /tmp/nyayassist.log

@@ -19,3 +19,15 @@ open ~/Library/Application\ Support/Claude/claude_desktop_config.json
   }
 }
 ```
+
+3. I kept using the following commands while debugging registering the tool
+```bash
+ # Follow logs in real-time
+tail -n 20 -F ~/Library/Logs/Claude/mcp*.log
+
+# Terminate Claude
+killall Claude
+
+# Monitor Spring log
+tail -f /tmp/nyayassist.log
+```
