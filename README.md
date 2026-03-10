@@ -4,16 +4,25 @@
 open ~/Library/Application\ Support/Claude/claude_desktop_config.json
 ```
 
-2. Add the following:
+2. Exact configuration for Claude:
 
 ```bash
 {
+  "preferences": {
+    "coworkWebSearchEnabled": true,
+    "coworkScheduledTasksEnabled": false,
+    "ccdScheduledTasksEnabled": false,
+    "sidebarMode": "chat"
+  },
   "mcpServers": {
     "lawyer-assistant": {
       "command": "java",
       "args": [
+        "-Dspring.main.banner-mode=off",
+        "-Dlogging.level.root=OFF",
+        "-Dlogging.file.name=/tmp/nyayassist.log",
         "-jar",
-        "/Users/aniket/Desktop/workspace/na-backend-ms/build/libs/assistLaw-0.0.1-SNAPSHOT.jar"
+        "/Users/aniket/Desktop/workspace/na-backend-ms/build/libs/nyayassist-0.0.1-SNAPSHOT.jar"
       ]
     }
   }
