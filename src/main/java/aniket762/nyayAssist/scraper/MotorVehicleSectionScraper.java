@@ -7,33 +7,33 @@ import org.jsoup.nodes.Element;
 import org.springframework.stereotype.Service;
 
 @Service
-public class IPCSectionScraper {
+public class MotorVehicleSectionScraper {
 
     public LawSection scrapeSection(String url) {
-
         try {
             Document doc = Jsoup.connect(url)
                     .userAgent("Mozilla/5.0")
                     .timeout(15000)
                     .get();
 
+            // Set title
             Element titleElement = doc.selectFirst("h1");
             if (titleElement == null)
                 return null;
             String title = titleElement.text();
+
             String sectionNumber = title.replaceAll("[^0-9]", "");
 
-            String description = "";
+            // Set description
             Element content = doc.selectFirst("article");
-
-            if (content != null) {
+            String description = "";
+            if (content != null)
                 description = content.text();
-            } else {
+            else
                 description = doc.body().text();
-            }
 
             return new LawSection(
-                    "IPC",
+                    "Motor Vehicles Act",
                     sectionNumber,
                     title,
                     description
@@ -45,4 +45,3 @@ public class IPCSectionScraper {
         }
     }
 }
-

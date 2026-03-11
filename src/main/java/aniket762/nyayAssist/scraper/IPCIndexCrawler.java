@@ -15,18 +15,12 @@ import java.util.Set;
 public class IPCIndexCrawler {
 
     public List<String> generateSectionUrls() {
-
         List<String> urls = new ArrayList<>();
-
         for (int i = 1; i <= 511; i++) {
-
             String url = "https://devgan.in/ipc/section/" + i + "/";
-
             urls.add(url);
         }
-
         System.out.println("Generated URLs: " + urls.size());
-
         return urls;
     }
 }
