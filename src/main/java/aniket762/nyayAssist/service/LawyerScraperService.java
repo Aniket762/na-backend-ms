@@ -60,4 +60,27 @@ public class LawyerScraperService {
             throw new RuntimeException("Failed to write results to file", e);
         }
     }
+
+    @Tool(description = "Summarize a legal case description and identify the type of law involved")
+    public String summarizeCase(
+            @ToolParam(description = "The legal case description provided by the user") String caseDescription
+    ) {
+        System.out.println("SUMMARIZE CASE TOOL CALLED → " + caseDescription);
+
+        String content = """
+            Case Summary
+            ============
+            Input       : %s
+            Timestamp   : %s
+            
+            Analysis:
+            - Case Type    : To be determined by LLM
+            - Suggested Law: To be determined by LLM
+            - Next Steps   : Consult a relevant lawyer
+            """.formatted(caseDescription, LocalDateTime.now());
+
+        writeToFile("case_summary", caseDescription.substring(0, 10), content);
+
+        return "Case summarized and written to file for: " + caseDescription;
+    }
 }
