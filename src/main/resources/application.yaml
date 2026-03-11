@@ -3,19 +3,22 @@ spring:
     name: nyayassist
 
   main:
-    web-application-type: none
+    web-application-type: servlet
     banner-mode: off
 
   ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        model: llama3.2:3b
+
     mcp:
       server:
         name: lawyer-assistant
         version: 1.0.0
-        transport: STDIO
         type: SYNC
 
 logging:
   level:
-    root: OFF
-  file:
-    name: /tmp/nyayassist.log
+    root: INFO
+    org.springframework.ai: DEBUG

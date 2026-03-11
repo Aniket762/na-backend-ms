@@ -44,3 +44,14 @@ tail -n 20 -F ~/Library/Logs/Claude/mcp*.log
 # Terminate Claude
 killall Claude
 ```
+
+4. LLM Model
+```bash
+# Install Ollama
+curl -fsSL https://ollama.com/install.sh | sh
+# Run llama3
+ollama pull llama3.1 && ollama serve
+
+#Ollama exposes at http://localhost:11434
+# Verify with curl http://localhost:11434 ->Ollama is running
+```
