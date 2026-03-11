@@ -25,12 +25,21 @@ dependencyManagement {
 }
 
 dependencies {
+    // Spring AI for agents
     implementation 'org.springframework.ai:spring-ai-mcp-server-webmvc-spring-boot-starter'
+
+    // Since we are using ollama llm
     implementation 'org.springframework.ai:spring-ai-ollama-spring-boot-starter'
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0'
+
+    // html scrapping
+    implementation 'org.jsoup:jsoup:1.17.2'
+
+    // json conversion
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.17.0'
 
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
