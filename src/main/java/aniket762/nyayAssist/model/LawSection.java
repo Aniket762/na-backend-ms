@@ -8,16 +8,18 @@ import lombok.Setter;
 public class LawSection {
 
     private String act;
+    private String chapter;
     private String section;
     private String title;
-    private String description;
+    private String content;
 
     public LawSection() {}
 
-    public LawSection(String act, String section, String title, String description) {
+    public LawSection(String act, String chapter, String section, String title, String content) {
         this.act = act;
+        this.chapter = chapter;
         this.section = section;
         this.title = title;
-        this.description = description;
+        this.content = content;
     }
 }
